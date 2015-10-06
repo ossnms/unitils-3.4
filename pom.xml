@@ -70,6 +70,13 @@
     </properties>
 
     <!-- Environment Settings -->
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>Coriant 3rd party repository</name>
+			<url>http://nexus.pt.rd.co-int.net/nexus/content/repositories/thirdparty/</url>
+		</repository>
+	</distributionManagement>
     <issueManagement>
         <system>jira</system>
         <url>http://jira.unitils.org/browse/UNI</url>
