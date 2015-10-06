@@ -11,3 +11,6 @@ nb-configuration.xml
 /.metadata
 .cache
 derby.log
+pom.xml.releasebackup
+release.properties
+dependency-reduced-pom.xml
