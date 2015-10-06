@@ -18,7 +18,7 @@ package org.unitils.orm.jpa.util.provider.hibernate;
 import static org.apache.commons.lang.StringUtils.isEmpty;
 import org.hibernate.Session;
 import org.hibernate.dialect.Dialect;
-import org.hibernate.ejb.Ejb3Configuration;
+//import org.hibernate.ejb.Ejb3Configuration;
 import org.springframework.instrument.classloading.LoadTimeWeaver;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.unitils.core.UnitilsException;
@@ -41,10 +41,10 @@ public class HibernateJpaProviderSupport implements JpaProviderSupport {
      * Checks if the mapping of the JPA entities with the database is still correct.
      */
     public void assertMappingWithDatabaseConsistent(EntityManager entityManager, Object configurationObject) {
-        Ejb3Configuration configuration = (Ejb3Configuration) configurationObject;
+        /*Ejb3Configuration configuration = (Ejb3Configuration) configurationObject;
         Dialect databaseDialect = getHibernateDatabaseDialect(configuration);
 
-        HibernateAssert.assertMappingWithDatabaseConsistent(configuration.getHibernateConfiguration(), (Session) entityManager.getDelegate(), databaseDialect);
+        HibernateAssert.assertMappingWithDatabaseConsistent(configuration.getHibernateConfiguration(), (Session) entityManager.getDelegate(), databaseDialect);*/
     }
 
 
@@ -54,7 +54,7 @@ public class HibernateJpaProviderSupport implements JpaProviderSupport {
      * @param configuration The hibernate config, not null
      * @return the database Dialect, not null
      */
-    protected Dialect getHibernateDatabaseDialect(Ejb3Configuration configuration) {
+    /*protected Dialect getHibernateDatabaseDialect(Ejb3Configuration configuration) {
         String dialectClassName = configuration.getProperties().getProperty("hibernate.dialect");
         if (isEmpty(dialectClassName)) {
             throw new UnitilsException("Property hibernate.dialect not specified");
@@ -64,7 +64,7 @@ public class HibernateJpaProviderSupport implements JpaProviderSupport {
         } catch (Exception e) {
             throw new UnitilsException("Could not instantiate dialect class " + dialectClassName, e);
         }
-    }
+    }*/
 
 
     public JpaVendorAdapter getSpringJpaVendorAdaptor() {
@@ -74,11 +74,12 @@ public class HibernateJpaProviderSupport implements JpaProviderSupport {
 
     public Object getProviderSpecificConfigurationObject(
             PersistenceProvider persistenceProvider) {
-        if (!(persistenceProvider instanceof UnitilsHibernatePersistenceProvider)) {
+        /*if (!(persistenceProvider instanceof UnitilsHibernatePersistenceProvider)) {
             throw new UnitilsException("Make sure that the persistence provider that is used is an instance of " + UnitilsHibernatePersistenceProvider.class.getSimpleName());
         }
         UnitilsHibernatePersistenceProvider hibernatePersistenceProvider = (UnitilsHibernatePersistenceProvider) persistenceProvider;
-        return hibernatePersistenceProvider.getHibernateConfiguration();
+        return hibernatePersistenceProvider.getHibernateConfiguration();*/
+		return null;
     }
 
 

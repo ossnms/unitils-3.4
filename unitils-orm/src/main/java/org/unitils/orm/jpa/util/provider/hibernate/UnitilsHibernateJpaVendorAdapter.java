@@ -18,6 +18,7 @@ package org.unitils.orm.jpa.util.provider.hibernate;
 import javax.persistence.spi.PersistenceProvider;
 
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.hibernate.jpa.HibernatePersistenceProvider;
 
 /**
  * Custom implementation of spring's <code>HibernateJpaVendorAdapter</code> that supplies a custom
@@ -30,7 +31,8 @@ public class UnitilsHibernateJpaVendorAdapter extends HibernateJpaVendorAdapter 
 
 	@Override
 	public PersistenceProvider getPersistenceProvider() {
-		return new UnitilsHibernatePersistenceProvider();
+		//return new UnitilsHibernatePersistenceProvider();
+		return new HibernatePersistenceProvider();
 	}
 
 	

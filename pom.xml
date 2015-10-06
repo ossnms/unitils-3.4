@@ -27,7 +27,7 @@
 
     <groupId>org.unitils</groupId>
     <artifactId>unitils</artifactId>
-    <version>3.4.3-SNAPSHOT</version>
+    <version>3.4.3.Coriant</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -43,7 +43,7 @@
         <module>unitils-spring</module>
         <module>unitils-io</module>
 
-        <module>unitils-test</module>
+        <!--module>unitils-test</module-->
         <!--module>unitils-testng-test</module-->       <!-- todo convert tests to TestNG -->
     </modules>
 
@@ -135,7 +135,7 @@
                     <mavenExecutorId>forked-path</mavenExecutorId>
                 </configuration>
             </plugin>
-            <plugin>
+            <!--plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
                 <version>1.4</version>
@@ -148,7 +148,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin-->
         </plugins>
     </build>
 
